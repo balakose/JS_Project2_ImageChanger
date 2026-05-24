@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Changer</title>
+    <style>
+        body{
+            background-color: black;
+            color: azure;
+            text-align: center;
+
+        }
+        .image_container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        .image_container img{
+            height: 300px;
+            border:2px solid blue;
+            border-radius: 10px;
+        }
+        .image_container h3{
+            background-color: burlywood;
+             color:black;
+            padding:10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Changer</h1>
+    <div class="image_container">
+        <img id="img1" src="https://media.istockphoto.com/id/1347665170/photo/london-at-sunset.jpg?s=1024x1024&w=is&k=20&c=ogVKCS26t23fSvgCO77CC_6mhtxMDk2cmBOUQ9VamYo=" alt="Image 1" >
+        <h3 id="bt1">London</h3>
+    </div>
+       
+    <script>
+        let img1=document.querySelector('#img1');
+        let bt1=document.querySelector('#bt1');
+        img1.addEventListener('mouseover',()=>{
+            img1.src="https://media.istockphoto.com/id/538811669/photo/manhattan-panorama-with-its-skyscrapers-illuminated-at-dusk-new-york.jpg?s=1024x1024&w=is&k=20&c=jC-sHqHy57d_4JQtDpO0-E7_P_Rtg9LyY5b_eEgMEDA="
+            bt1.innerText='New York';
+        })
+        img1.addEventListener('mouseout',()=>{
+            img1.src="https://media.istockphoto.com/id/1347665170/photo/london-at-sunset.jpg?s=1024x1024&w=is&k=20&c=ogVKCS26t23fSvgCO77CC_6mhtxMDk2cmBOUQ9VamYo="
+            bt1.innerText='London';
+        })
+    </script>
+</body>
+</html>
